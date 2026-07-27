@@ -1,0 +1,54 @@
+{
+  "name": "funky-sdk",
+  "version": "0.1.0",
+  "description": "The official TypeScript SDK for Funky",
+  "keywords": [
+    "funky",
+    "agents",
+    "sdk",
+    "typescript"
+  ],
+  "homepage": "https://funky.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funkyhq/funky-typescript.git"
+  },
+  "license": "MIT",
+  "author": "Funky",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check": "npm run typecheck && npm test && npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.10"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
+  }
+}
