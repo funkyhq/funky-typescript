@@ -2,7 +2,7 @@ import { Agents, Environments, Sessions } from "./resources";
 import { type Fetch, Transport } from "./transport";
 import { VERSION } from "./version";
 
-export const DEFAULT_BASE_URL = "https://api.funky.dev";
+export const DEFAULT_BASE_URL = "https://agents.funky.dev";
 
 export interface FunkyOptions {
   apiKey?: string;

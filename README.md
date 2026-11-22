@@ -192,7 +192,7 @@ ambiguous failures. SSE streams reconnect from the last yielded event.
 ```ts
 const funky = new Funky({
   apiKey: "fk_...",                 // defaults from FUNKY_API_KEY
-  baseURL: "https://api.funky.dev",
+  baseURL: "https://agents.funky.dev",
   timeout: 30,                     // seconds
   maxRetries: 2,
   userAgent: "my-service/1.0",

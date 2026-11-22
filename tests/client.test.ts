@@ -303,7 +303,7 @@ describe("client and resources", () => {
   it("reads the environment API key and exposes a secret-safe representation", () => {
     process.env.FUNKY_API_KEY = "fk_environment_secret";
     const client = new Funky({ fetch: vi.fn() });
-    expect(client.toString()).toBe('Funky(baseURL="https://api.funky.dev")');
+    expect(client.toString()).toBe('Funky(baseURL="https://agents.funky.dev")');
     client.close();
   });
 });
